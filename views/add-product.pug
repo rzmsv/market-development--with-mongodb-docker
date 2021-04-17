@@ -1,0 +1,11 @@
+extends layoutes/mainlayout.pug
+
+block style
+
+block header
+    form(action="/admin/add-product", method="post") 
+        <input (type="text" name="title" placeholder="Insert your book name")/>
+        textarea(type="text" name="description" placeholder="Insert your book description")
+        <input (type="text" name="price" placeholder="Insert your book price")/>
+        <input (type="text" name="imageUrl" placeholder="Insert your book imageUrl")/>
+        button Save

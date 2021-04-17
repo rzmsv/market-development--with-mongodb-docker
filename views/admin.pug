@@ -1,0 +1,18 @@
+extends layoutes/mainlayout.pug
+
+block style
+
+block header
+    .containerHome 
+        ul.listHome
+            each v in products 
+                li.itemHome 
+                    h1.titleHome #{v.title}
+                    img.imageHome(src=v.imageUrl, alt="")
+                    p.descHome #{v.description}
+                    p.priceHome #{v.price}$
+                    a(href="http://localhost:8080/detail/"+v.id+"") Details
+                    a(href="http://localhost:8080/admin/edit/"+v.id+"") Edit
+                    form(action="/", method="post")
+                        input(type="hidden" name="productId" value=`${v.id}`)
+                        button.btn Add to Card

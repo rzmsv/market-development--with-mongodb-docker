@@ -1,0 +1,31 @@
+version: '3.5'
+services:
+  market-app:
+    # build:
+    #   context: .
+    image: node:14.16
+    command: bash -c "npm install && node ./src/index.js"
+    working_dir: /usr/src/app/
+    restart: unless-stopped
+    container_name: market-app
+    ports:
+      - 8080:8080
+    volumes:
+      - ./:/usr/src/app
+      # - /usr/src/app/node_modules
+    networks:
+      - market-network
+
+  mongo-db:
+    image: mongo
+    container_name: mongo-db
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - market-network
+
+networks:
+  market-network:
+
+volumes:
+  mongo_data:

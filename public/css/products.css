@@ -1,0 +1,25 @@
+.containerHome{
+}
+.containerHome .listHome {
+}
+.containerHome .itemHome {
+    background-color: coral;
+    width: 200px;
+    display: inline-block;
+    margin: 10px;
+}
+.containerHome .listHome .titleHome{
+    text-align: center;
+    font-size: 25px;
+    padding: 5px;
+}
+.containerHome .listHome .imageHome{
+    width: 200px;
+    height: 200px;
+}
+.containerHome .listHome .descHome{
+    padding: 5px;
+}
+.containerHome .listHome .priceHome{
+    padding: 5px;
+}

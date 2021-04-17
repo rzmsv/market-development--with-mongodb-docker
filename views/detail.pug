@@ -1,0 +1,9 @@
+extends layoutes/mainlayout.pug
+
+block style
+
+block header
+    h1 #{result.title}
+    img(src="../"+ result.imageUrl +"", alt="")
+    p #{result.description}
+    p #{result.price}

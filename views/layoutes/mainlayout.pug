@@ -1,0 +1,42 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="../css/reset.css")
+        link(rel="stylesheet", href="../css/main-layout.css")
+        link(rel="stylesheet", href="../css/products.css")
+        title #{title}
+    block style
+    body 
+        .container 
+            
+            nav 
+                
+                ul 
+                    li 
+                        a(href="http://localhost:8080/") Home
+                    if authHeader == null
+                        li 
+                            a(href="http://localhost:8080/signup") Signup
+                        li 
+                            a(href="http://localhost:8080/login") Login
+                    if authHeader != null
+                        if authHeader.admin == true
+                            li 
+                                a(href="http://localhost:8080/admin") Admin
+                            li 
+                                a(href="http://localhost:8080/admin/edit") Edit
+                            li 
+                                a(href="http://localhost:8080/admin/add-product") Add Product
+                        if authHeader.admin == false        
+                            li 
+                                a(href="http://localhost:8080/user") Profile
+                            li 
+                                a(href="http://localhost:8080/cart") Cart
+                if authHeader != null
+                    form.logout( action="/logout", method="post")
+                        button Logout
+            h1 #{title}
+    block header

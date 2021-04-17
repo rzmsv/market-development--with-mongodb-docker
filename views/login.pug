@@ -1,0 +1,9 @@
+extends layoutes/mainlayout.pug
+
+block style
+
+block header
+    form(action="/login", method="post") 
+        <input (type="text" name="email" placeholder="Insert your book E-mail")/>
+        <input (type="password" name="password" placeholder="Insert your password")/>
+        button Enter

@@ -1,0 +1,19 @@
+extends layoutes/mainlayout.pug
+
+block style
+
+block header
+    .containerHome 
+        h1 welcome to your cart
+        ul.listHome
+            each v in userProducts 
+                li.itemHome 
+                    h1.titleHome #{v.productId.title}
+                    img.imageHome(src=v.productId.imageUrl, alt="")
+                    p.descHome #{v.productId.description}
+                    p.priceHome #{v.productId.price}$
+                    p.priceHome #{v.quantity}
+                    a(href="http://localhost:8080/detail/"+v.productId.id+"") Details
+                    form(action="/cart", method="post")
+                        input(type="hidden" name="productId" value=`${v.productId.id}`)
+                        button.btn Delete

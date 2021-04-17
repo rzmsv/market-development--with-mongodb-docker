@@ -1,0 +1,17 @@
+extends layoutes/mainlayout.pug
+
+block style
+
+block header
+    h1 Product ID : #{prod.id}
+    form(action="/admin/edit", method="post")
+        label(for="title") Edit book name 
+            input(type="text" name="title" value=`${prod.title}`)
+        label(for="description") Edit book description 
+            input(type="text" name="description", value=`${prod.description}`)
+        label(for="price") Edit book price 
+            input(type="text" name="price", value=`${prod.price}`)
+        label(for="imageUrl") Edit book imageUrl
+            input(type="text" name="imageUrl", value=`${prod.imageUrl}`)
+        input(type="hidden" name="id" value=`${prod.id}`)
+        button Edit

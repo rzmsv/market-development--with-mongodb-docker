@@ -1,0 +1,42 @@
+body{
+    background-color: rgb(235, 235, 235);
+    box-sizing: border-box;
+}
+.clearfix{
+    float: none;
+    clear: both;
+}
+.container{}
+.container nav{
+    background-color: rgb(251, 255, 0);
+    height: 50px;
+    padding: 5px;
+}
+.container nav ul{
+    margin: 10px 0 0 0;
+    display: inline-block;
+}
+.container nav ul li{
+    display: inline-block;
+    margin: 0 20px 0 20px;
+}
+.container nav ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+.container nav .logout{
+    float: right;
+    margin: 8px 20px;
+}
+.container nav .logout button{
+    padding: 5px 20px;
+    font-size: 17px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(51, 255, 0);
+    color: white;
+    font-weight: bold;
+}

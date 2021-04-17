@@ -1,0 +1,13 @@
+extends layoutes/mainlayout.pug
+
+block style
+
+block header
+    form(action="/signup", method="post") 
+        <input (type="text" name="name" placeholder="Insert your name")/>
+        <input (type="text" name="lastname" placeholder="Insert your lastname")/>
+        <input (type="text" name="user" placeholder="Insert your user id")/>
+        <input (type="text" name="email" placeholder="Insert your book E-mail")/>
+        <input (type="password" name="password" placeholder="Insert your password")/>
+        <input (type="password" name="confirmPassword" placeholder="Insert your password")/>
+        button Join
