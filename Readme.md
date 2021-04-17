@@ -1,4 +1,4 @@
-# Chat APP
+# Market app
 ## Usage
 1. Install docker and docker-compose,
 2. use ``cp .env.example .env`` to make a copy of env file
